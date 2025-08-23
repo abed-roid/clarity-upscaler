@@ -8,6 +8,10 @@ app = FastAPI()
 
 OUTPUT_FILE = "/root/clarity-upscaler/output.0.webp"
 
+@app.get("/ping")
+async def ping():
+    return JSONResponse(content={"message": "pong"}, status_code=200)
+
 @app.post("/upscale")
 async def upscale(
     image_url: str = Form(...),
