@@ -13,7 +13,7 @@ async def ping():
     return JSONResponse(content={"message": "pong"}, status_code=200)
 
 @app.post("/upscale")
-async def upscale(
+def upscale(
     image_url: str = Form(...),
     mask_url: str = Form(None)
 ):
@@ -40,7 +40,7 @@ async def upscale(
             "-i", "tiling_height=144",
             "-i", 'output_format=webp',
             "-i", "negative_prompt=worst quality, low quality, normal quality, lowres, low details, oversaturated, undersaturated, overexposed, underexposed, grayscale, bw, bad photo, bad photography, bad art",
-            "-i", "num_inference_steps=15"
+            "-i", "num_inference_steps=22"
         ]
 
         # Step 3: Execute cog command
