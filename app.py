@@ -33,14 +33,14 @@ def upscale(
             "-i", "dynamic=1",
             "-i", "sharpen=0",
             "-i", 'sd_model=epicrealism_naturalSinRC1VAE.safetensors [84d76a0328]',
-            "-i", "creativity=0.42",
+            "-i", "creativity=0.48",
             "-i", "resemblance=1.5",
             "-i", "scale_factor=2",
             "-i", "tiling_width=112",
             "-i", "tiling_height=144",
             "-i", 'output_format=webp',
             "-i", "negative_prompt=worst quality, low quality, normal quality, lowres, low details, oversaturated, undersaturated, overexposed, underexposed, grayscale, bw, bad photo, bad photography, bad art",
-            "-i", "num_inference_steps=22"
+            "-i", "num_inference_steps=23"
         ]
 
         # Step 3: Execute cog command
