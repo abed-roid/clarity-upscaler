@@ -29,18 +29,18 @@ def upscale(
             "cog", "predict",
             "-i", f'image={image_url}',
             "-i", f'mask={mask_url}',
-            "-i", 'prompt=masterpiece, best quality, highres, <lora:more_details:.9> <lora:SDXLrender_v2.0:1>',
+            "-i", 'prompt=masterpiece, best quality, highres, <lora:more_details:.3>',
             "-i", "dynamic=1",
             "-i", "sharpen=0",
             "-i", 'sd_model=epicrealism_naturalSinRC1VAE.safetensors [84d76a0328]',
-            "-i", "creativity=0.48",
-            "-i", "resemblance=1.5",
+            "-i", "creativity=0.54",
+            "-i", "resemblance=2.2",
             "-i", "scale_factor=2",
             "-i", "tiling_width=112",
             "-i", "tiling_height=144",
             "-i", 'output_format=webp',
             "-i", "negative_prompt=worst quality, low quality, normal quality, lowres, low details, oversaturated, undersaturated, overexposed, underexposed, grayscale, bw, bad photo, bad photography, bad art",
-            "-i", "num_inference_steps=23"
+            "-i", "num_inference_steps=20"
         ]
 
         # Step 3: Execute cog command
